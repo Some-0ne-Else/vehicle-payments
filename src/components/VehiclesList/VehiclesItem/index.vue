@@ -5,9 +5,10 @@
       <div class="vehicle__image-wrapper"><img class="vehicle__image" v-bind:src=vehicle.image alt="Изображение ТС"/></div>
       <div>
       <p class="vehicle__text">{{ vehicle.type }}</p>
-      <p class="vehicle__text" v-if=vehicle.comment>{{ vehicle.comment }}</p>
+      <p class="vehicle__text" v-show=vehicle.comment>{{ vehicle.comment }}</p>
     </div>
-      <VehicleButton @click.prevent="onDelete">Удалить</VehicleButton>
+      <VehicleButton v-show="!isDeleting" @click.prevent="onDelete">Удалить</VehicleButton>
+      <p v-show="isDeleting" class="vehicle__text">Удаление</p>
   </div>
 </template>
 
@@ -20,6 +21,10 @@ export default defineComponent({
   props: {
     vehicle: {
       type: Object,
+      required: true,
+    },
+    isDeleting: {
+      type: Boolean,
       required: true,
     },
   },

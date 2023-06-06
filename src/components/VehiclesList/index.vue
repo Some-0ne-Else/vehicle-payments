@@ -2,7 +2,7 @@
   <div v-if="isLoading">Данные загружаются, пожалуйста подождите</div>
   <div v-else-if="!vehicles.length">Транспортные средства отсутствуют</div>
   <div v-else class="container">
-    <VehiclesItem v-for="vehicle in vehicles" :key="vehicle._id" :vehicle="vehicle" @onDelete="$emit('onDelete', vehicle._id)" />
+    <VehiclesItem v-for="vehicle in vehicles" :key="vehicle._id" :vehicle="vehicle" :isDeleting="isDeleting" @onDelete="$emit('onDelete', vehicle._id)" />
   </div>
 </template>
 
@@ -19,6 +19,10 @@ export default defineComponent({
       required: true,
     },
     isLoading: {
+      type: Boolean,
+      required: true,
+    },
+    isDeleting: {
       type: Boolean,
       required: true,
     },
