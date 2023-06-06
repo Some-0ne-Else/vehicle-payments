@@ -1,0 +1,4 @@
+export const DEFAULT_REQUEST_DELAY = 1000;
+
+// eslint-disable-next-line max-len
+export const TEMP_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDUxMDI0ODYxZGRlNmIyYWMwYTYwNWYiLCJpYXQiOjE2ODMwMzA2MjMsImV4cCI6MTY4MzYzNTQyM30.SYKwDHDCIAdeNsN1gMcaXpjCIqljNoa3XsPGdaQFdFo';
