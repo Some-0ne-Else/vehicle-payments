@@ -78,7 +78,7 @@ export default defineComponent({
       }, DEFAULT_REQUEST_DELAY);
     },
     async deleteVehicle(id: string) {
-      const response = await fetch(`${vehiclesUrl}/${id}`, {
+      return fetch(`${vehiclesUrl}/${id}`, {
         method: 'DELETE',
         headers: {
           authorization: `Bearer ${TEMP_TOKEN}`,
@@ -87,7 +87,6 @@ export default defineComponent({
         .then((res) => res.json())
         .then(() => { this.handleDelete(id); })
         .catch((err) => console.log(err));
-      console.log(response);
     },
   },
   mounted() {

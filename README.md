@@ -1,24 +1,21 @@
 # vehicle-payments
 
-## Project setup
+## Фронтенд для vehicle-payments-api
+
+## Установка зависимостей
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Дев разработка
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Сборка
+
 ```
 yarn build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
