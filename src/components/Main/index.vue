@@ -12,13 +12,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import FormVehicle from '@/components/FormVehicle.vue';
+import FormVehicle from '@/components/FormVehicle/Index.vue';
 import VehiclesList from '@/components/VehiclesList/index.vue';
 import { Vehicle } from '@/types/general';
 import API from '@/api';
-import { DEFAULT_REQUEST_DELAY, TEMP_TOKEN } from '../constants/general';
-import { vehiclesUrl } from '../constants/routes';
-import funcWithDelay from '../helpers/general';
+import { DEFAULT_REQUEST_DELAY, TEMP_TOKEN } from '../../constants/general';
+import { vehiclesUrl } from '../../constants/routes';
+import funcWithDelay from '../../helpers/general';
 
 export default defineComponent({
   name: 'MainComponent',

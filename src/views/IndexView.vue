@@ -1,15 +1,15 @@
 <template>
-    <MainComponent/>
+    <Main />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import MainComponent from '@/components/MainComponent.vue';
+import Main from '@/components/Main/index.vue';
 
 export default defineComponent({
   name: 'IndexView',
   components: {
-    MainComponent,
+    Main,
   },
 });
 </script>

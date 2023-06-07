@@ -1,4 +1,3 @@
-<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <template>
   <div class="modal" v-show="visible" @mousedown="$emit('modalOutsideClick', false)">
     <div class="modal__content" @mousedown.stop>
