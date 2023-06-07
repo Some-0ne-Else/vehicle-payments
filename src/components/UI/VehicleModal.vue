@@ -2,6 +2,7 @@
 <template>
   <div class="modal" v-show="visible" @mousedown="$emit('modalOutsideClick', false)">
     <div class="modal__content" @mousedown.stop>
+      <button class="modal__button" @click="$emit('modalOutsideClick', false)">X</button>
       <slot />
     </div>
   </div>
@@ -35,6 +36,18 @@ export default defineComponent({
   display: flex;
 }
 
+.modal__button{
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  font-size: 24px;
+  border-radius: 12px;
+  border: none;
+  background-color: 1px solid black;
+  cursor: pointer;
+
+}
+
 .modal__content {
   margin: auto;
   padding: 20px;
@@ -42,5 +55,7 @@ export default defineComponent({
   min-width: 400px;
   min-height: 300px;
   background-color: white;
+  position: relative;
+
 }
 </style>
